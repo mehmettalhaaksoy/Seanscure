@@ -31,8 +31,8 @@ Built with the Web Crypto API using AES-256-GCM + RSA-OAEP hybrid encryption.
 Each record gets a fresh 256-bit DEK wrapped in two independent RSA envelopes:
 one for the record owner, one for backend key recovery via Azure Key Vault.
 
-→ [Encryption architecture](<script src="https://gist.github.com/mehmettalhaaksoy/1ebe8b6c288b5032de953640e9220b4c.js"></script>)
-→ [vault.ts — core implementation](<script src="https://gist.github.com/mehmettalhaaksoy/4c299861e5d896b0be3a4a2418a89b5a.js"></script>)
+→ [Encryption architecture](https://gist.github.com/mehmettalhaaksoy/1ebe8b6c288b5032de953640e9220b4c)
+→ [vault.ts — core implementation](https://gist.github.com/mehmettalhaaksoy/4c299861e5d896b0be3a4a2418a89b5a)
 
 **Role-Based Permission System**
 Granular per-employee permission overrides on top of role defaults.
