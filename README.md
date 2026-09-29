@@ -18,7 +18,7 @@ Designed for psychologists, dietitians, physiotherapists and clinic administrato
 | Frontend | Vue 3, TypeScript, PrimeVue, Tailwind CSS |
 | Backend | .NET 8, PostgreSQL, SignalR |
 | Mobile | Capacitor (Android) |
-| Infrastructure | Azure Key Vault, Cloudflare |
+| Infrastructure | Self-hosted key vault, Cloudflare |
 
 ### Key Technical Features
 
@@ -29,7 +29,7 @@ cannot read the data it holds.
 
 Built with the Web Crypto API using AES-256-GCM + RSA-OAEP hybrid encryption.
 Each record gets a fresh 256-bit DEK wrapped in two independent RSA envelopes:
-one for the record owner, one for backend key recovery via Azure Key Vault.
+one for the record owner, one for backend key recovery via a self-hosted key vault.
 
 → [Encryption architecture](https://gist.github.com/mehmettalhaaksoy/1ebe8b6c288b5032de953640e9220b4c)
 → [vault.ts — core implementation](https://gist.github.com/mehmettalhaaksoy/4c299861e5d896b0be3a4a2418a89b5a)
@@ -76,7 +76,7 @@ Psikologlar, diyetisyenler, fizyoterapistler ve klinik yöneticileri için tasar
 | Frontend | Vue 3, TypeScript, PrimeVue, Tailwind CSS |
 | Backend | .NET 8, PostgreSQL, SignalR |
 | Mobil | Capacitor (Android) |
-| Altyapı | Azure Key Vault, Cloudflare |
+| Altyapı | Self-hosted key vault, Cloudflare |
 
 ### Öne Çıkan Teknik Özellikler
 
@@ -87,11 +87,11 @@ içeriğe erişemez.
 
 Web Crypto API ile AES-256-GCM + RSA-OAEP hibrit şifreleme kullanıldı.
 Her kayıt için rastgele 256-bit DEK üretilir; bu anahtar iki bağımsız
-RSA zarfına sarılır: biri kayıt sahibi için, biri Azure Key Vault üzerinden
-kurtarma için.
+RSA zarfına sarılır: biri kayıt sahibi için, biri self-hosted key vault
+üzerinden kurtarma için.
 
-→ [Şifreleme mimarisi](PRIVATE_GIST_LINK)
-→ [vault.ts — çekirdek implementasyon](PUBLIC_GIST_LINK)
+→ [Şifreleme mimarisi](https://gist.github.com/mehmettalhaaksoy/1ebe8b6c288b5032de953640e9220b4c)
+→ [vault.ts — çekirdek implementasyon](https://gist.github.com/mehmettalhaaksoy/4c299861e5d896b0be3a4a2418a89b5a)
 
 **Rol Tabanlı İzin Sistemi**
 Rol varsayılanları üzerine kişi bazlı override desteği.
